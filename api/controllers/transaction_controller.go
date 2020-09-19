@@ -51,17 +51,17 @@ func (server *Server) CreateTransaction(w http.ResponseWriter, r *http.Request) 
 	responses.JSON(w, http.StatusCreated, transactionCreated)
 }
 
-func (server *Server) GetPosts(w http.ResponseWriter, r *http.Request) {
+// func (server *Server) GetPosts(w http.ResponseWriter, r *http.Request) {
 
-	post := models.Post{}
+// 	post := models.Post{}
 
-	posts, err := post.FindAllPosts(server.DB)
-	if err != nil {
-		responses.ERROR(w, http.StatusInternalServerError, err)
-		return
-	}
-	responses.JSON(w, http.StatusOK, posts)
-}
+// 	posts, err := post.FindAllPosts(server.DB)
+// 	if err != nil {
+// 		responses.ERROR(w, http.StatusInternalServerError, err)
+// 		return
+// 	}
+// 	responses.JSON(w, http.StatusOK, posts)
+// }
 
 // func (server *Server) GetPost(w http.ResponseWriter, r *http.Request) {
 
